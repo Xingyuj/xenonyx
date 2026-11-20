@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1330">
+  <meta name="description" content="A tiny cat. One very shiny starship. Two planets (so far). Welcome to Xenonyx, where useful ideas become delightful little worlds.">
+  <meta property="og:title" content="Xenonyx — A little cat. A big universe.">
+  <meta property="og:description" content="Haha, I got this starship. I'm gonna name it Xenonyx.">
+  <meta property="og:type" content="website">
+  <title>Xenonyx · A little cat. A big universe.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#universe">Skip to the universe</a>
+  <div class="cosmos" aria-hidden="true">
+    <div class="nebula nebula--one"></div><div class="nebula nebula--two"></div>
+    <div class="galaxy galaxy--one"></div><div class="galaxy galaxy--two"></div>
+    <div id="stars" class="stars"></div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Xenonyx home">
+      <img src="assets/logo.svg" alt="" width="39" height="39"><span>Xenonyx</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#home" class="nav-link is-current">Home</a>
+      <a href="#universe" class="nav-link">The Star Map</a>
+      <a href="#missions" class="nav-link">Our Missions</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <a class="nav-action" href="#universe">Explore <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#home">Home</a><a href="#universe">The Star Map</a><a href="#missions">Our Missions</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-label="Welcome to Xenonyx">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> TRANSMISSION FROM SOMEWHERE IN SPACE <span class="signal">✳</span></div>
+        <h1>Haha, I got<br>this starship.<br><span class="h1-minor">I'm gonna name it</span><br><span class="gradient-text">Xenonyx<span class="period">.</span></span></h1>
+        <p>One little cat. One ridiculously ambitious star map. Building useful, delightful worlds — one planet at a time.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#universe"><span>Explore the universe</span><span aria-hidden="true">↗</span></a><a class="button button-ghost" href="#missions">What's the plan? <span aria-hidden="true">→</span></a></div>
+        <div class="tiny-aside"><span aria-hidden="true">✦</span> No actual planets were harmed in the making of this website.</div>
+      </div>
+      <div class="ship-stage" aria-label="A happy cat piloting the white Xenonyx starship">
+        <div class="ship-halo" aria-hidden="true"></div>
+        <div class="thruster-glow" aria-hidden="true"></div>
+        <img class="ship" src="assets/xenonyx-starship.webp" alt="A delighted cat in astronaut gear piloting a sleek white spaceship with Xenonyx written on its hull" width="1318" height="675" fetchpriority="high">
+        <span class="ship-label"><span class="label-spark">✧</span> CAPTAIN: PROFESSIONAL DAYDREAMER</span>
+      </div>
+      <a class="scroll-cue" href="#universe"><span class="scroll-line"></span> SCROLL TO DISCOVER <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section class="map-section" id="universe" aria-labelledby="map-title">
+      <div class="map-intro">
+        <span class="section-kicker"><span aria-hidden="true">✦</span> THE UNIVERSE, SO FAR</span>
+        <h2 id="map-title">A galaxy of <em>what ifs.</em></h2>
+        <p>Every big idea starts on a tiny planet. Hover over one (or tap it) to see what's cooking.</p>
+      </div>
+      <div class="star-map" id="starMap">
+        <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div><div class="orbit orbit-three" aria-hidden="true"></div>
+        <span class="map-cross cross-one" aria-hidden="true">+</span><span class="map-cross cross-two" aria-hidden="true">+</span><span class="map-cross cross-three" aria-hidden="true">+</span>
+        <span class="sector-marker sector-one">SECTOR 01 <span>↗</span></span><span class="sector-marker sector-two">SECTOR 02 <span>↗</span></span>
+        <div class="planet-zone planet-zone-tradigo">
+          <button class="planet-button is-active" id="planet-tradigo" data-planet="tradigo" aria-expanded="true" aria-controls="planet-details" aria-label="Explore Tradigo, the home project planet">
+            <span class="planet-glow planet-glow-gold"></span><span class="planet-ring planet-ring-gold"></span><img src="assets/tradigo-planet.webp" alt="" width="322" height="322" loading="lazy"><span class="planet-indicator"><span class="indicator-dot"></span> EXPLORE</span>
+          </button>
+          <div class="planet-name"><span>01 / LIVE WORLD</span><strong>Tradigo</strong></div>
+        </div>
+        <div class="planet-zone planet-zone-wetnose">
+          <button class="planet-button" id="planet-wetnose" data-planet="wetnose" aria-expanded="false" aria-controls="planet-details" aria-label="Explore Wetnose, the pet planet">
+            <span class="planet-glow planet-glow-pink"></span><span class="planet-ring planet-ring-pink"></span><img src="assets/wetnose-planet.webp" alt="" width="272" height="272" loading="lazy"><span class="planet-indicator"><span class="indicator-dot"></span> EXPLORE</span>
+          </button>
+          <div class="planet-name"><span>02 / IN ORBIT</span><strong>Wetnose</strong></div>
+        </div>
+        <div class="planet-zone planet-zone-mystery"><span class="mystery-planet" aria-hidden="true"></span><div class="mystery-label">03 / ??? <span>TOP SECRET</span></div></div>
+        <div class="planet-zone planet-zone-small-a"><span class="distant-planet blue" aria-hidden="true"></span><span class="distant-caption">UNEXPLORED</span></div>
+        <div class="planet-zone planet-zone-small-b"><span class="distant-planet lavender" aria-hidden="true"></span></div>
+        <div class="planet-zone planet-zone-small-c"><span class="distant-planet jade" aria-hidden="true"></span><span class="distant-caption">SOMEDAY</span></div>
+        <aside class="planet-card" id="planet-details" aria-live="polite" aria-atomic="true">
+          <div class="card-topline"><span id="card-serial">PLANET 001 • ACTIVE MISSION</span><span class="card-status"><span class="live-dot"></span> SIGNAL FOUND</span></div>
+          <div class="card-icon" id="card-icon" aria-hidden="true">⌂</div>
+          <h3 id="card-title">Tradigo</h3><div class="card-subtitle" id="card-subtitle">The builder planet 🛠</div>
+          <p id="card-description">For every “I should really fix that...” that deserves a “Haha, done!” Plan home projects, find tradies, and make the whole thing a little less chaotic — with AI along for the ride.</p>
+          <a id="card-link" class="card-link" href="https://tradigo.com.au" target="_blank" rel="noopener noreferrer">Visit Tradigo <span aria-hidden="true">↗</span></a>
+          <div class="card-bottom"><span id="card-coordinate">COORDINATES: 01.001 / HOME</span><span>✳ ✳ ✳</span></div>
+        </aside>
+        <div class="map-hint"><span class="hint-orbit">◎</span> <span>SELECT A PLANET TO ESTABLISH CONTACT</span></div>
+      </div>
+    </section>
+
+    <section class="deep-space" id="deep-space" aria-labelledby="deeper-title">
+      <div class="depth-depth depth-a" aria-hidden="true"></div><div class="depth-depth depth-b" aria-hidden="true"></div>
+      <span class="section-kicker">BEYOND THE KNOWN UNIVERSE</span>
+      <h2 id="deeper-title">And then there’s <span class="gradient-text">everything else.</span></h2>
+      <p>Two planets down. An unreasonable number of ideas to go. Some of the best worlds are still just tiny specks in the distance.</p>
+      <div class="future-worlds" aria-label="Future ideas">
+        <div class="future-world"><span class="future-orb future-orb-one"></span><span>NEW WORLDS</span><strong>Loading curiosity...</strong></div>
+        <div class="future-world"><span class="future-orb future-orb-two"></span><span>EXPERIMENTS</span><strong>Probably a little weird.</strong></div>
+        <div class="future-world"><span class="future-orb future-orb-three"></span><span>THE UNKNOWN</span><strong>That's the fun part.</strong></div>
+      </div>
+    </section>
+
+    <section class="mission-section" id="missions" aria-labelledby="missions-title">
+      <div class="mission-heading"><span class="section-kicker">THE CAPTAIN'S VERY SERIOUS PLAN</span><h2 id="missions-title">Small cat.<br><span class="gradient-text">Cosmic ambitions.</span></h2><p>Our mission statement was written by a cat with access to a spaceship. Surprisingly, it makes sense.</p></div>
+      <div class="mission-grid">
+        <article class="mission"><span class="mission-number">01 —</span><div class="mission-symbol">⌂</div><h3>Make home projects less painful.</h3><p>Turn ambitious home ideas into real projects. Good tools, great tradies, fewer “where do I even start?” moments.</p><span class="mission-tag">TRADIGO UNIVERSE</span></article>
+        <article class="mission"><span class="mission-number">02 —</span><div class="mission-symbol">♡</div><h3>Make pets the happiest earthlings.</h3><p>Better connections, clever experiences and a little more magic for our furry co-pilots.</p><span class="mission-tag">WETNOSE UNIVERSE</span></article>
+        <article class="mission"><span class="mission-number">03 —</span><div class="mission-symbol">✧</div><h3>Keep exploring the impossible.</h3><p>Practical AI, playful design, strange new ideas. We're building for real life, but dreaming in galaxies.</p><span class="mission-tag">TO BE CONTINUED...</span></article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <span class="contact-glint" aria-hidden="true">✳</span><span class="section-kicker">INTERGALACTIC COMMUNICATIONS</span><h2 id="contact-title">Got a planet-sized idea?</h2><p>Send us a transmission. The captain is probably awake.</p><a class="button button-primary" href="mailto:hello@xenonyx.com">Say hello <span aria-hidden="true">↗</span></a>
+      <span class="contact-note">EARTH OFFICE · MELBOURNE, AUSTRALIA <span>✦</span> CURRENTLY ACCEPTING GOOD IDEAS</span>
+    </section>
+  </main>
+  <footer class="footer"><a class="brand footer-brand" href="#home"><img src="assets/logo.svg" alt="" width="30" height="30"><span>Xenonyx</span></a><span>Made on Earth. Dreamed up somewhere else. ✳</span><span>© <span id="year">2026</span> Xenonyx</span></footer>
+</body>
+</html>
