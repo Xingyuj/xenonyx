@@ -1,38 +1,18 @@
-# Xenonyx — Starship Landing Page
+# Xenonyx — Starship landing page (refined)
 
-A playful, single-page Xenonyx company site. **Static HTML/CSS/JavaScript; no build, framework, or API key required.**
+Single-page, static GitHub Pages website. No compilation or dependencies.
 
-## Preview locally
+## Deploy
+1. Upload `index.html`, `styles.css`, `script.js`, `assets/`, `.nojekyll`, and `robots.txt` to the root of the GitHub Pages repository. Overwrite the prior version.
+2. Your existing GitHub Pages deployment workflow should redeploy from `main` automatically.
+3. Custom domain remains `xenonyx.com`; DNS settings do not need to be changed for a site design update.
 
-Open `index.html` in a browser, or run:
+## Changes
+- Removed the previous cat-size phrasing from visible copy, title, and metadata.
+- Redesigned first viewport to follow the approved concept: bold italic headline, ship, two planet interactions, a floating speech-bubble product card, and bottom mission ribbon.
+- Higher-quality spacecraft image, responsive layout, keyboard and touch-friendly planet controls, reduced-motion accessibility, lightweight star-field effect.
 
-```bash
-python3 -m http.server 8000
-```
-
-Visit http://localhost:8000.
-
-## Deploy to GitHub Pages
-
-1. Create a new GitHub repository (e.g. `xenonyx-site`).
-2. Upload **the contents** of this folder to the repository root — `index.html`, `styles.css`, `script.js`, `assets/`, etc.
-3. Go to **Settings → Pages → Build and deployment** and choose **Deploy from a branch**, `main`, `/ (root)`.
-4. Visit the GitHub Pages URL displayed in Settings → Pages.
-5. Optional: set the custom domain to `xenonyx.com`; configure DNS using GitHub's current official documentation: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site.
-6. Enable **Enforce HTTPS** after DNS is verified.
-
-## Content to verify before publishing
-
-- The contact address `hello@xenonyx.com` is a placeholder. Configure it or change the `mailto:` link.
-- Product links currently point to `https://tradigo.com.au` and `https://wetnose.com.au`; verify live destinations and availability.
-- Illustrations are generated design assets. If you need a consistent full brand kit, replace/export the artwork with approved master assets.
-- Google Fonts are loaded online; fallback system fonts render without a network connection.
-
-## Interactions
-
-- Hover (desktop), focus (keyboard), or tap (touch) on Tradigo/Wetnose planets to swap their speech-bubble information card.
-- Spaceship and stars are CSS-animated and respect `prefers-reduced-motion`.
-- Mobile navigation is functional.
-- Smooth anchor links navigate the one-page experience.
-
-All files are self-contained, with relative paths suitable for GitHub Pages project or custom domains.
+## Notes
+- Product buttons link to `tradigo.com.au` and `wetnose.com.au`; confirm the destinations are ready.
+- Contact uses `hello@xenonyx.com`; configure this inbox before advertising it.
+- The site uses Google Fonts (Outfit, DM Sans) where online, with system font fallback.
