@@ -4,3 +4,91 @@
 @media(max-width:780px){.site-header{height:68px;padding:0 21px}.brand{font-size:26px}.brand img{width:35px;height:35px}.desktop-nav{display:none}.menu-toggle{display:block}.mobile-nav:not([hidden]){display:flex;position:absolute;top:68px;left:0;right:0;background:#172441f5;flex-direction:column;padding:16px 22px 24px;gap:8px;box-shadow:0 20px 35px #05081888}.mobile-nav a{padding:12px;font-weight:700}.hero{min-height:1080px}.hero-copy{top:50px;left:25px;right:25px;width:auto;max-width:100%}.hero h1{font-size:clamp(35px,7.8vw,59px)}.hero-copy>p{font-size:14px;max-width:490px;margin:18px 0 21px}.eyebrow{font-size:9px;margin-bottom:14px}.hero-actions .button{font-size:12px;padding:13px 17px}.cosmic-scene{top:340px;bottom:105px}.planet-position-tradigo{left:43%;top:6%;width:46%}.planet-position-wetnose{left:54%;top:41%;width:33%}.planet-card{top:38%;left:4%;right:auto;width:45%;min-height:225px;padding:16px;border-radius:23px}.planet-card:before{display:none}.card-heading{gap:5px}.card-logo{font-size:26px;width:25px}.card-name{font-size:25px}.card-subtitle{font-size:11px}.card-points li{font-size:10.5px}.card-points{gap:8px}.card-tip{font-size:7px}.ship-stage{width:95%;left:-28%;bottom:2%}.mission-ribbon{grid-template-columns:repeat(2,1fr);min-height:110px;padding:9px 13px;left:2%;right:2%;border-radius:25px 25px 0 0}.ribbon-intro,.ribbon-item{min-height:45px}.ribbon-item:nth-child(3){border-left:0}.ribbon-intro strong{font-size:20px}.ribbon-icon,.ribbon-symbol{font-size:25px}.orbit-label{display:none}.future-grid{grid-template-columns:1fr}.future-card{min-height:230px}.deep-space{padding:95px 24px}.footer{flex-direction:column;text-align:center}}
 @media(max-width:500px){.hero{min-height:960px}.hero-copy{top:40px;left:20px;right:20px}.hero h1{font-size:clamp(31px,7.8vw,40px)}.hero h1 strong{font-size:1.43em}.hero-copy>p{font-size:12.5px;max-width:340px}.eyebrow{font-size:7.5px;letter-spacing:.1em}.button{gap:8px!important}.cosmic-scene{top:300px;bottom:115px}.planet-position-tradigo{top:3%;left:37%;width:61%}.planet-position-wetnose{top:35%;left:56%;width:40%}.planet-card{left:4%;top:34%;width:49%;padding:13px;min-height:210px}.card-logo{font-size:22px;width:20px}.card-name{font-size:21px}.card-subtitle{font-size:9.5px}.card-points{margin-top:11px;gap:7px}.card-points li{font-size:9px;gap:5px}.card-points li:before{width:14px;height:14px;font-size:9px}.card-tip{display:none}.card-link{width:26px;height:26px;bottom:9px;right:10px}.ship-stage{width:125%;left:-44%;bottom:0}.mission-ribbon{bottom:0;min-height:115px}.ribbon-item{font-size:10px}.ribbon-intro strong{font-size:17px}.ribbon-symbol,.ribbon-icon{font-size:20px}.ribbon-intro,.ribbon-item{padding:5px}.deep-space h2,.contact h2{font-size:39px}.deep-space p,.contact p{font-size:14px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Mobile composition v3 — intentionally reflows each scene layer rather than scaling desktop absolute offsets. */
+@media (max-width:780px) {
+  html { scroll-padding-top:76px; }
+  .site-header { position:relative; isolation:isolate; height:70px; padding:0 20px; }
+  .brand { font-size:26px; gap:10px; }
+  .brand img { width:39px; height:39px; }
+  .menu-toggle { width:46px; height:46px; display:flex; align-items:center; justify-content:center; flex-direction:column; border:1px solid #d9e7ff40; border-radius:14px; background:#ffffff10; }
+  .menu-toggle span { width:22px; height:2px; margin:3px; transition:transform .2s,opacity .2s; }
+  .menu-toggle[aria-expanded="true"] span:first-child { transform:translateY(8px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity:0; }
+  .menu-toggle[aria-expanded="true"] span:last-child { transform:translateY(-8px) rotate(-45deg); }
+  .mobile-nav:not([hidden]) { display:flex; position:absolute; top:calc(100% + 8px); left:auto; right:14px; width:min(260px,calc(100vw - 28px)); z-index:40; flex-direction:column; gap:2px; padding:12px; background:#111d39; border:1px solid #bbdbff55; border-radius:20px; box-shadow:0 22px 55px #02091bdc; backdrop-filter:blur(20px); }
+  .mobile-nav a { padding:13px 16px; border-radius:12px; font-size:15px; }
+  .mobile-nav a:hover,.mobile-nav a:focus-visible { background:#ffffff1b; }
+  .hero { min-height:0; height:auto; display:flex; flex-direction:column; overflow:hidden; }
+  .hero:before { top:6%; right:-50%; width:130%; height:60%; }
+  .hero-horizon { width:150%; bottom:185px; height:320px; }
+  .hero-copy { position:relative; z-index:5; top:auto; left:auto; right:auto; width:100%; max-width:none; padding:43px 24px 4px; pointer-events:auto; }
+  .eyebrow { font-size:10px; letter-spacing:.13em; margin-bottom:19px; color:#aac7fb; }
+  .hero h1 { font-size:clamp(37px,7.3vw,62px); line-height:1.07; letter-spacing:-.047em; max-width:710px; }
+  .hero h1>span { white-space:normal; }
+  .hero h1 strong { font-size:1.31em; max-width:100%; }
+  .hero-copy>p { font-size:15px; line-height:1.6; max-width:470px; margin:22px 0 23px; }
+  .hero-actions { gap:10px; }
+  .hero-actions .button { font-size:13px; padding:13px 18px; min-height:47px; }
+  .cosmic-scene { position:relative; inset:auto; width:100%; height:790px; flex:none; margin-top:4px; }
+  .orbit-one { top:7%; right:-42%; width:130%; height:45%; }
+  .orbit-two { top:28%; right:-26%; width:115%; height:42%; }
+  .orbit-three { top:35%; right:0; width:85%; height:30%; }
+  .ship-stage { top:0; bottom:auto; left:0; width:min(88%,660px); }
+  .planet-position-tradigo { z-index:5; top:190px; left:auto; right:1.5%; width:min(49%,280px); }
+  .planet-position-wetnose { z-index:5; top:328px; left:5%; width:min(42%,235px); }
+  .planet-card { z-index:8; top:548px; left:20px; right:20px; width:auto; min-height:205px; padding:21px 24px; border-radius:27px; }
+  .planet-card:before { display:none; }
+  .card-heading { gap:12px; }
+  .card-logo { width:40px; font-size:30px; }
+  .card-name { font-size:29px; }
+  .card-subtitle { font-size:13px; max-width:none; }
+  .card-points { margin-top:16px; gap:10px; }
+  .card-points li { font-size:13px; gap:10px; }
+  .card-points li:before { width:18px; height:18px; font-size:12px; }
+  .card-tip { display:block; font-size:8px; margin-top:12px; }
+  .card-link { width:40px; height:40px; bottom:18px; right:18px; }
+  .planet-hover-label { display:none; }
+  .mission-ribbon { position:relative; bottom:auto; left:auto; right:auto; margin:0 14px 18px; border-radius:24px; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0; padding:12px; }
+  .ribbon-intro,.ribbon-item { min-width:0; padding:10px; gap:8px; }
+  .ribbon-item:nth-child(3) { border-left:0; }
+  .ribbon-item { font-size:12px; }
+  .ribbon-intro strong { font-size:21px; }
+  .ribbon-symbol,.ribbon-icon { font-size:26px; }
+}
+@media (max-width:500px) {
+  .site-header { height:66px; padding:0 18px; }
+  .brand { font-size:25px; }
+  .hero-copy { padding:35px 21px 6px; }
+  .eyebrow { font-size:9px; letter-spacing:.08em; margin-bottom:16px; }
+  .hero h1 { font-size:clamp(32px,8.1vw,40px); line-height:1.09; }
+  .hero h1 strong { font-size:1.34em; }
+  .title-spark { margin-left:6px; }
+  .hero-copy>p { font-size:14px; max-width:390px; line-height:1.55; margin:18px 0 20px; }
+  .hero-actions { display:grid; grid-template-columns:1fr 1fr; gap:9px; }
+  .hero-actions .button { width:100%; min-height:48px; padding:11px 10px; font-size:11.5px; gap:6px!important; }
+  .cosmic-scene { height:665px; margin-top:3px; }
+  .ship-stage { top:0; left:-6%; width:95%; }
+  .planet-position-tradigo { top:157px; right:0; left:auto; width:55%; }
+  .planet-position-wetnose { top:282px; left:3%; width:44%; }
+  .planet-card { top:448px; left:18px; right:18px; width:auto; min-height:196px; padding:18px 19px; }
+  .card-name { font-size:26px; }
+  .card-subtitle { font-size:12px; }
+  .card-points { gap:8px; margin-top:13px; }
+  .card-points li { font-size:11.5px; padding-right:25px; }
+  .card-tip { font-size:7px; }
+  .mission-ribbon { grid-template-columns:1fr 1fr; margin:0 12px 16px; border-radius:22px; padding:9px; }
+  .ribbon-intro,.ribbon-item { min-height:54px; padding:8px 6px; }
+  .ribbon-intro strong { font-size:18px; }
+  .ribbon-item { font-size:10.5px; line-height:1.35; }
+  .ribbon-symbol,.ribbon-icon { font-size:22px; }
+  .deep-space { padding:82px 21px; }
+  .deep-space h2,.contact h2 { font-size:clamp(35px,9vw,44px); }
+  .contact { padding:85px 22px; }
+}
+@media (max-width:370px) {
+  .hero-copy { padding-inline:16px; }
+  .hero h1 { font-size:30px; }
+  .hero-actions .button { font-size:10.5px; }
+  .planet-card { left:12px; right:12px; }
+}
